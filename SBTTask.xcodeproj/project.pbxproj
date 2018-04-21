@@ -8,24 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		CE64F3C9208B87A400E4CA7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F3C8208B87A400E4CA7B /* AppDelegate.m */; };
-		CE64F3CC208B87A400E4CA7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F3CB208B87A400E4CA7B /* ViewController.m */; };
-		CE64F3CF208B87A400E4CA7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE64F3CD208B87A400E4CA7B /* Main.storyboard */; };
 		CE64F3D1208B87A800E4CA7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE64F3D0208B87A800E4CA7B /* Assets.xcassets */; };
-		CE64F3D4208B87A800E4CA7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE64F3D2208B87A800E4CA7B /* LaunchScreen.storyboard */; };
 		CE64F3D7208B87A800E4CA7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F3D6208B87A800E4CA7B /* main.m */; };
+		CE64F3DF208B884100E4CA7B /* PaymentDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F3DE208B884100E4CA7B /* PaymentDetailsController.m */; };
+		CE64F3E3208B8A8700E4CA7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE64F3E2208B8A8700E4CA7B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE64F3C4208B87A400E4CA7B /* SBTTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBTTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE64F3C7208B87A400E4CA7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE64F3C8208B87A400E4CA7B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CE64F3CA208B87A400E4CA7B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CE64F3CB208B87A400E4CA7B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CE64F3CE208B87A400E4CA7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE64F3D0208B87A800E4CA7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE64F3D3208B87A800E4CA7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE64F3D5208B87A800E4CA7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE64F3D6208B87A800E4CA7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE64F3DD208B884100E4CA7B /* PaymentDetailsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsController.h; sourceTree = "<group>"; };
+		CE64F3DE208B884100E4CA7B /* PaymentDetailsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsController.m; sourceTree = "<group>"; };
+		CE64F3E2208B8A8700E4CA7B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +56,24 @@
 		CE64F3C6208B87A400E4CA7B /* SBTTask */ = {
 			isa = PBXGroup;
 			children = (
+				CE64F3E4208B8AAE00E4CA7B /* Supporting Files */,
+				CE64F3DD208B884100E4CA7B /* PaymentDetailsController.h */,
+				CE64F3DE208B884100E4CA7B /* PaymentDetailsController.m */,
 				CE64F3C7208B87A400E4CA7B /* AppDelegate.h */,
 				CE64F3C8208B87A400E4CA7B /* AppDelegate.m */,
-				CE64F3CA208B87A400E4CA7B /* ViewController.h */,
-				CE64F3CB208B87A400E4CA7B /* ViewController.m */,
-				CE64F3CD208B87A400E4CA7B /* Main.storyboard */,
-				CE64F3D0208B87A800E4CA7B /* Assets.xcassets */,
-				CE64F3D2208B87A800E4CA7B /* LaunchScreen.storyboard */,
-				CE64F3D5208B87A800E4CA7B /* Info.plist */,
-				CE64F3D6208B87A800E4CA7B /* main.m */,
 			);
 			path = SBTTask;
+			sourceTree = "<group>";
+		};
+		CE64F3E4208B8AAE00E4CA7B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE64F3D0208B87A800E4CA7B /* Assets.xcassets */,
+				CE64F3D5208B87A800E4CA7B /* Info.plist */,
+				CE64F3D6208B87A800E4CA7B /* main.m */,
+				CE64F3E2208B8A8700E4CA7B /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +133,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE64F3D4208B87A800E4CA7B /* LaunchScreen.storyboard in Resources */,
+				CE64F3E3208B8A8700E4CA7B /* LaunchScreen.storyboard in Resources */,
 				CE64F3D1208B87A800E4CA7B /* Assets.xcassets in Resources */,
-				CE64F3CF208B87A400E4CA7B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,32 +145,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE64F3CC208B87A400E4CA7B /* ViewController.m in Sources */,
 				CE64F3D7208B87A800E4CA7B /* main.m in Sources */,
+				CE64F3DF208B884100E4CA7B /* PaymentDetailsController.m in Sources */,
 				CE64F3C9208B87A400E4CA7B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CE64F3CD208B87A400E4CA7B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE64F3CE208B87A400E4CA7B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CE64F3D2208B87A800E4CA7B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE64F3D3208B87A800E4CA7B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CE64F3D8208B87A800E4CA7B /* Debug */ = {
