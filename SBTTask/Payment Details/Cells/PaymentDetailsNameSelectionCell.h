@@ -8,6 +8,6 @@
 
 #import "PaymentDetailsBaseCell.h"
 
-@interface PaymentDetailsNameSelectionCell : PaymentDetailsBaseCell
+@interface PaymentDetailsNameSelectionCell : PaymentDetailsBaseCell <UITextViewDelegate>
 
 @end

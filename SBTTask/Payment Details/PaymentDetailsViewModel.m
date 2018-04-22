@@ -10,7 +10,6 @@
 #import "PaymentDetailsDocumentInfoCellModel.h"
 #import "PaymentDetailsAmoutCellModel.h"
 #import "PaymentDetailsReceiverCellModel.h"
-#import "PaymentDetailsNameSelectionCellModel.h"
 #import "PaymentDetailsDatePickerCellModel.h"
 
 #import "NSDate+NSString.h"
@@ -52,10 +51,13 @@ typedef enum : NSUInteger {
 
     PaymentDetailsAmoutCellModel *amountModel = [[PaymentDetailsAmoutCellModel alloc] initWithPayment:self.payment];
     
+    PaymentDetailsNameSelectionCellModel *nameModel = [PaymentDetailsNameSelectionCellModel new];
+    nameModel.delegate = self;
+    
     [self.cellModels addObjectsFromArray:@[docInfoModel,
                                            amountModel,
                                            [PaymentDetailsReceiverCellModel new],
-                                           [PaymentDetailsNameSelectionCellModel new]]];
+                                           nameModel]];
 }
 
 - (NSMutableArray *)keyValueObservableCellModels {
@@ -103,4 +105,8 @@ typedef enum : NSUInteger {
     return [[self cellModels] indexOfObject:model];
 }
     
+- (void)nameTextDidChange {
+    self.shouldUpdateRowsTrigger = true;
+}
+
 @end

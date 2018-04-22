@@ -14,6 +14,8 @@
 #import "UITableView+CellRegistering.h"
 #import "NSObject+Observe.h"
 
+NSString * const updateRowsTriggerKeyPath = @"viewModel.shouldUpdateRowsTrigger";
+
 @interface PaymentDetailsController ()
 
 @property (strong, nonatomic) PaymentDetailsViewModel *viewModel;
@@ -43,17 +45,27 @@
 
 - (void)bindViewModel {
     [self.observingKeyPaths addObject:@"viewModel.cellModels"];
+    [self.observingKeyPaths addObject:updateRowsTriggerKeyPath];
 
     [self observeKeyPaths:self.observingKeyPaths];
 }
     
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([self.observingKeyPaths containsObject:keyPath]) {
-        [self registerCells];
-        [self updateTableWithChange:change];
+        if ([keyPath isEqualToString:updateRowsTriggerKeyPath]) {
+            [self updateTableForHeights];
+        } else {
+            [self registerCells];
+            [self updateTableWithChange:change];
+        }
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
+}
+
+- (void)updateTableForHeights {
+    [[self tableView] beginUpdates];
+    [[self tableView] endUpdates];
 }
 
 - (void)updateTableWithChange:(NSDictionary *)change {
@@ -117,6 +129,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:true];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [self.viewModel.cellModels objectAtIndex:indexPath.row].height;
 }
 
 - (void)dealloc {

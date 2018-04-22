@@ -13,5 +13,9 @@
 - (NSString *)identifier {
     return @"";
 }
-    
+
+- (CGFloat)height {
+    return UITableViewAutomaticDimension;
+}
+
 @end

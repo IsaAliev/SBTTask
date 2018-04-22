@@ -8,6 +8,15 @@
 
 #import "BaseCellModel.h"
 
+@protocol PaymentDetailsNameSelectionCellDelegate
+
+- (void)nameTextDidChange;
+
+@end
+
 @interface PaymentDetailsNameSelectionCellModel : BaseCellModel
+
+@property (strong, nonatomic) NSString *name;
+@property (weak, nonatomic) id<PaymentDetailsNameSelectionCellDelegate> delegate;
 
 @end

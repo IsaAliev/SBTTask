@@ -16,11 +16,15 @@
 @end
 
 @implementation PaymentDetailsDatePickerCell
-    
+
 - (void)updateViews {
-    self.datePicker.date = [[self cellModel] selectedDate];
-}
+    NSDate *selectedDate = [[self cellModel] selectedDate];
     
+    if (selectedDate) {
+        self.datePicker.date = [[self cellModel] selectedDate];
+    }
+}
+
 - (IBAction)applyButtonAction:(UIButton *)sender {
     [[self cellModel] setSelectedDate:self.datePicker.date];
     [[self cellModel] applyButtonDidTap];

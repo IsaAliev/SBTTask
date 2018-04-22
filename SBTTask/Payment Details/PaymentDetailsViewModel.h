@@ -10,15 +10,17 @@
 
 #import "PaymentDetailsDocumentInfoCellModel.h"
 #import "PaymentDetailsDatePickerCellModel.h"
+#import "PaymentDetailsNameSelectionCellModel.h"
 #import "Payment.h"
 
 @class BaseCellModel;
 
-@interface PaymentDetailsViewModel : NSObject <PaymentDetailsDocumentInfoCellDelegate, PaymentDetailsDatePickerCellDelegate>
+@interface PaymentDetailsViewModel : NSObject <PaymentDetailsDocumentInfoCellDelegate, PaymentDetailsDatePickerCellDelegate, PaymentDetailsNameSelectionCellDelegate>
 
 - (instancetype)initWithPayment:(Payment *)payment;
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSMutableArray<BaseCellModel *> *cellModels;
+@property (assign, nonatomic) BOOL shouldUpdateRowsTrigger;
 
 @end

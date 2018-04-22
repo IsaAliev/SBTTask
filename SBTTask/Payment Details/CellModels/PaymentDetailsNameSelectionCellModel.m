@@ -8,7 +8,17 @@
 
 #import "PaymentDetailsNameSelectionCellModel.h"
 
+@interface PaymentDetailsNameSelectionCellModel ()
+
+@end
+
 @implementation PaymentDetailsNameSelectionCellModel
+
+- (void)setName:(NSString *)name {
+    _name = name;
+    
+    [self.delegate nameTextDidChange];
+}
 
 - (NSString *)identifier {
     return @"PaymentDetailsNameSelectionCell";

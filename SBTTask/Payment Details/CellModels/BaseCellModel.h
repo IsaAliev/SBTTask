@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface BaseCellModel : NSObject
 
 @property (strong, nonatomic, readonly) NSString *identifier;
-    
+@property (assign, nonatomic, readonly) CGFloat height;
+
 @end
