@@ -15,4 +15,9 @@
     [self registerNib:[UINib nibWithNibName:identifier bundle:NSBundle.mainBundle] forCellReuseIdentifier:identifier];
 }
 
+- (void)registerCellForIdentifier:(NSString *)identifier {
+    [self registerClass:NSClassFromString(identifier) forCellReuseIdentifier:identifier];
+    [self registerNib:[UINib nibWithNibName:identifier bundle:NSBundle.mainBundle] forCellReuseIdentifier:identifier];
+}
+
 @end

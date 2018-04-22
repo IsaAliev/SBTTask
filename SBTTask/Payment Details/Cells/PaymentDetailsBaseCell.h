@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "BaseCellModel.h"
 
 @interface PaymentDetailsBaseCell : UITableViewCell
 
-@property (strong, nonatomic) BaseCellModel *model;
+@property (strong, nonatomic) BaseCellModel *viewModel;
 
 - (void)updateViews;
     

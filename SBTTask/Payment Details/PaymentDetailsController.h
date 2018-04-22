@@ -6,12 +6,12 @@
 //  Copyright © 2018 IA. All rights reserved.
 //
 
-#import "PaymentDetailsViewModel.h"
-
 #import <UIKit/UIKit.h>
+
+#import "PaymentDetailsViewModel.h"
 
 @interface PaymentDetailsController : UITableViewController
 
-- (instancetype)initWithModel:(PaymentDetailsViewModel *)model;
+- (instancetype)initWithViewModel:(PaymentDetailsViewModel *)viewModel;
 
 @end

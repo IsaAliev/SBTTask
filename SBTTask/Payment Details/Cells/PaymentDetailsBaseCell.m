@@ -10,8 +10,9 @@
 
 @implementation PaymentDetailsBaseCell
 
-- (void)setModel:(id)model {
-    _model = model;
+- (void)setViewModel:(BaseCellModel *)viewModel {
+    _viewModel = viewModel;
+    
     [self updateViews];
 }
 

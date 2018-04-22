@@ -7,10 +7,23 @@
 //
 
 #import "BaseCellModel.h"
+#import "Payment.h"
+
+@class PaymentDetailsDocumentInfoCellModel;
+
+@protocol PaymentDetailsDocumentInfoCellDelegate
+
+- (void)dateButtonDidTapOnCellModel:(PaymentDetailsDocumentInfoCellModel *)cellModel;
+
+@end
 
 @interface PaymentDetailsDocumentInfoCellModel : BaseCellModel
 
+@property (weak, nonatomic) id<PaymentDetailsDocumentInfoCellDelegate> delegate;
 @property (strong, nonatomic) NSString *numberString;
 @property (strong, nonatomic) NSString *dateString;
-    
+
+- (instancetype)initWithPayment:(Payment *)payment;
+- (void)dateButtonDidTap;
+
 @end

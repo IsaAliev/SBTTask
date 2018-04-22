@@ -30,6 +30,12 @@
 		CE64F41A208BCF3D00E4CA7B /* UITableView+CellRegistering.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F419208BCF3D00E4CA7B /* UITableView+CellRegistering.m */; };
 		CE64F41E208C75A700E4CA7B /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F41D208C75A700E4CA7B /* HeaderView.xib */; };
 		CE64F421208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F420208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.m */; };
+		CE64F425208C8B0900E4CA7B /* PaymentDetailsDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F423208C8B0900E4CA7B /* PaymentDetailsDatePickerCell.m */; };
+		CE64F426208C8B0900E4CA7B /* PaymentDetailsDatePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F424208C8B0900E4CA7B /* PaymentDetailsDatePickerCell.xib */; };
+		CE64F429208C8BC800E4CA7B /* PaymentDetailsDatePickerCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F428208C8BC800E4CA7B /* PaymentDetailsDatePickerCellModel.m */; };
+		CE64F42C208CA13300E4CA7B /* NSDate+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F42B208CA13300E4CA7B /* NSDate+NSString.m */; };
+		CE64F430208CAD8800E4CA7B /* Payment.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F42F208CAD8800E4CA7B /* Payment.m */; };
+		CE64F433208CB51A00E4CA7B /* NSObject+Observe.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F432208CB51A00E4CA7B /* NSObject+Observe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +79,17 @@
 		CE64F41D208C75A700E4CA7B /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		CE64F41F208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsNameSelectionCellModel.h; sourceTree = "<group>"; };
 		CE64F420208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsNameSelectionCellModel.m; sourceTree = "<group>"; };
+		CE64F422208C8B0900E4CA7B /* PaymentDetailsDatePickerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsDatePickerCell.h; sourceTree = "<group>"; };
+		CE64F423208C8B0900E4CA7B /* PaymentDetailsDatePickerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsDatePickerCell.m; sourceTree = "<group>"; };
+		CE64F424208C8B0900E4CA7B /* PaymentDetailsDatePickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentDetailsDatePickerCell.xib; sourceTree = "<group>"; };
+		CE64F427208C8BC800E4CA7B /* PaymentDetailsDatePickerCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsDatePickerCellModel.h; sourceTree = "<group>"; };
+		CE64F428208C8BC800E4CA7B /* PaymentDetailsDatePickerCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsDatePickerCellModel.m; sourceTree = "<group>"; };
+		CE64F42A208CA13300E4CA7B /* NSDate+NSString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+NSString.h"; sourceTree = "<group>"; };
+		CE64F42B208CA13300E4CA7B /* NSDate+NSString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NSString.m"; sourceTree = "<group>"; };
+		CE64F42E208CAD8800E4CA7B /* Payment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Payment.h; sourceTree = "<group>"; };
+		CE64F42F208CAD8800E4CA7B /* Payment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Payment.m; sourceTree = "<group>"; };
+		CE64F431208CB51A00E4CA7B /* NSObject+Observe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Observe.h"; sourceTree = "<group>"; };
+		CE64F432208CB51A00E4CA7B /* NSObject+Observe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Observe.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +122,7 @@
 		CE64F3C6208B87A400E4CA7B /* SBTTask */ = {
 			isa = PBXGroup;
 			children = (
+				CE64F42D208CAD7600E4CA7B /* Models */,
 				CE64F417208BCEF000E4CA7B /* Categories */,
 				CE64F3E5208B8C4E00E4CA7B /* Payment Details */,
 				CE64F3E4208B8AAE00E4CA7B /* Supporting Files */,
@@ -143,6 +161,7 @@
 		CE64F3E6208B8C5C00E4CA7B /* Cells Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				CE64F424208C8B0900E4CA7B /* PaymentDetailsDatePickerCell.xib */,
 				CE64F3FB208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.xib */,
 				CE64F3F6208B8CED00E4CA7B /* PaymentDetailsReceiverCell.xib */,
 				CE64F3F1208B8CD300E4CA7B /* PaymentDetailsAmoutCell.xib */,
@@ -154,6 +173,8 @@
 		CE64F3E9208B8C7F00E4CA7B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CE64F422208C8B0900E4CA7B /* PaymentDetailsDatePickerCell.h */,
+				CE64F423208C8B0900E4CA7B /* PaymentDetailsDatePickerCell.m */,
 				CE64F3EA208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.h */,
 				CE64F3EB208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.m */,
 				CE64F3EF208B8CD300E4CA7B /* PaymentDetailsAmoutCell.h */,
@@ -190,6 +211,8 @@
 				CE64F415208BA6D000E4CA7B /* PaymentDetailsReceiverCellModel.m */,
 				CE64F41F208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.h */,
 				CE64F420208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.m */,
+				CE64F427208C8BC800E4CA7B /* PaymentDetailsDatePickerCellModel.h */,
+				CE64F428208C8BC800E4CA7B /* PaymentDetailsDatePickerCellModel.m */,
 			);
 			path = CellModels;
 			sourceTree = "<group>";
@@ -199,6 +222,10 @@
 			children = (
 				CE64F418208BCF3D00E4CA7B /* UITableView+CellRegistering.h */,
 				CE64F419208BCF3D00E4CA7B /* UITableView+CellRegistering.m */,
+				CE64F42A208CA13300E4CA7B /* NSDate+NSString.h */,
+				CE64F42B208CA13300E4CA7B /* NSDate+NSString.m */,
+				CE64F431208CB51A00E4CA7B /* NSObject+Observe.h */,
+				CE64F432208CB51A00E4CA7B /* NSObject+Observe.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -218,6 +245,15 @@
 				CE64F41D208C75A700E4CA7B /* HeaderView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CE64F42D208CAD7600E4CA7B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE64F42E208CAD8800E4CA7B /* Payment.h */,
+				CE64F42F208CAD8800E4CA7B /* Payment.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +315,7 @@
 			files = (
 				CE64F3F8208B8CED00E4CA7B /* PaymentDetailsReceiverCell.xib in Resources */,
 				CE64F3E3208B8A8700E4CA7B /* LaunchScreen.storyboard in Resources */,
+				CE64F426208C8B0900E4CA7B /* PaymentDetailsDatePickerCell.xib in Resources */,
 				CE64F3D1208B87A800E4CA7B /* Assets.xcassets in Resources */,
 				CE64F3FD208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.xib in Resources */,
 				CE64F3F3208B8CD300E4CA7B /* PaymentDetailsAmoutCell.xib in Resources */,
@@ -296,18 +333,23 @@
 			files = (
 				CE64F3ED208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.m in Sources */,
 				CE64F3D7208B87A800E4CA7B /* main.m in Sources */,
+				CE64F430208CAD8800E4CA7B /* Payment.m in Sources */,
 				CE64F400208B8D6B00E4CA7B /* PaymentDetailsBaseCell.m in Sources */,
 				CE64F3F7208B8CED00E4CA7B /* PaymentDetailsReceiverCell.m in Sources */,
 				CE64F3DF208B884100E4CA7B /* PaymentDetailsController.m in Sources */,
+				CE64F425208C8B0900E4CA7B /* PaymentDetailsDatePickerCell.m in Sources */,
 				CE64F3C9208B87A400E4CA7B /* AppDelegate.m in Sources */,
 				CE64F413208BA21500E4CA7B /* PaymentDetailsAmoutCellModel.m in Sources */,
 				CE64F3FC208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.m in Sources */,
 				CE64F41A208BCF3D00E4CA7B /* UITableView+CellRegistering.m in Sources */,
+				CE64F433208CB51A00E4CA7B /* NSObject+Observe.m in Sources */,
 				CE64F416208BA6D000E4CA7B /* PaymentDetailsReceiverCellModel.m in Sources */,
 				CE64F406208B8E7700E4CA7B /* UnderlinedLabel.m in Sources */,
 				CE64F410208B9CC200E4CA7B /* PaymentDetailsDocumentInfoCellModel.m in Sources */,
 				CE64F40D208B9C3400E4CA7B /* BaseCellModel.m in Sources */,
 				CE64F421208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.m in Sources */,
+				CE64F42C208CA13300E4CA7B /* NSDate+NSString.m in Sources */,
+				CE64F429208C8BC800E4CA7B /* PaymentDetailsDatePickerCellModel.m in Sources */,
 				CE64F409208B9BE100E4CA7B /* PaymentDetailsViewModel.m in Sources */,
 				CE64F3F2208B8CD300E4CA7B /* PaymentDetailsAmoutCell.m in Sources */,
 			);
@@ -433,6 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8WY4UX44X6;
 				INFOPLIST_FILE = "SBTTask/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,6 +493,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8WY4UX44X6;
 				INFOPLIST_FILE = "SBTTask/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

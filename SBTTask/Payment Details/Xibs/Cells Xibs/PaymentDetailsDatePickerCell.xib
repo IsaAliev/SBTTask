@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="211" id="KGk-i7-Jjw" customClass="PaymentDetailsDatePickerCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="211"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="210.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1D3-u5-Jtm">
+                        <rect key="frame" x="0.0" y="48" width="320" height="162"/>
+                        <date key="date" timeIntervalSinceReferenceDate="546081561.70701897">
+                            <!--2018-04-22 09:19:21 +0000-->
+                        </date>
+                        <locale key="locale" localeIdentifier="ru"/>
+                    </datePicker>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlX-kg-4LB">
+                        <rect key="frame" x="16" y="8" width="75" height="32"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <state key="normal" title="Очистить">
+                            <color key="titleColor" red="0.2274509804" green="0.59999999999999998" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="clearButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VmP-fq-uyH"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2a-c2-PbN">
+                        <rect key="frame" x="214" y="8" width="90" height="32"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <state key="normal" title="Применить">
+                            <color key="titleColor" red="0.2274509804" green="0.59999999999999998" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="applyButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="T6R-sI-jIz"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="l2a-c2-PbN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="AnS-1R-1W1"/>
+                    <constraint firstItem="GlX-kg-4LB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Dtt-nD-Hza"/>
+                    <constraint firstAttribute="bottom" secondItem="1D3-u5-Jtm" secondAttribute="bottom" id="KXf-ud-WeR"/>
+                    <constraint firstItem="1D3-u5-Jtm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Z7i-Ml-Ord"/>
+                    <constraint firstItem="GlX-kg-4LB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Zw6-w3-0Iq"/>
+                    <constraint firstItem="1D3-u5-Jtm" firstAttribute="top" secondItem="GlX-kg-4LB" secondAttribute="bottom" constant="8.5" id="acm-H5-foX"/>
+                    <constraint firstAttribute="trailing" secondItem="1D3-u5-Jtm" secondAttribute="trailing" id="biM-S3-4Zz"/>
+                    <constraint firstAttribute="trailing" secondItem="l2a-c2-PbN" secondAttribute="trailing" constant="16" id="nqK-LR-p3n"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="datePicker" destination="1D3-u5-Jtm" id="b42-5c-7NP"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="137.5"/>
+        </tableViewCell>
+    </objects>
+</document>

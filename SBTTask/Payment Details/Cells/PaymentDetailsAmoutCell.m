@@ -19,10 +19,10 @@
 @implementation PaymentDetailsAmoutCell
 
 - (void)updateViews {
-    PaymentDetailsAmoutCellModel *model = (PaymentDetailsAmoutCellModel *)self.model;
+    PaymentDetailsAmoutCellModel *cellModel = (PaymentDetailsAmoutCellModel *)self.viewModel;
     
-    self.amountLabel.text = model.amountString;
-    self.taxLabel.text = model.taxString;
+    self.amountLabel.text = cellModel.amountString;
+    self.taxLabel.text = cellModel.taxString;
 }
 
 @end

@@ -21,12 +21,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="74.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата поручения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgS-Fp-ISR">
-                        <rect key="frame" x="160" y="11.5" width="108" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.58823529409999997" green="0.61176470589999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Документ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvW-vx-LsM">
                         <rect key="frame" x="16" y="11" width="67" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -59,20 +53,29 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6s-cd-SXk">
+                        <rect key="frame" x="160" y="5" width="108" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="Дата поручения">
+                            <color key="titleColor" red="0.58823529409999997" green="0.61176470589999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="dateButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="91A-og-mQm"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="wKx-4x-eVP" secondAttribute="bottom" constant="3" id="6rJ-TF-ybx"/>
+                    <constraint firstItem="M6s-cd-SXk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="2rD-cO-3lX"/>
                     <constraint firstItem="eEe-il-k6n" firstAttribute="centerY" secondItem="wKx-4x-eVP" secondAttribute="centerY" id="MmM-9j-pcD"/>
-                    <constraint firstItem="OgS-Fp-ISR" firstAttribute="centerY" secondItem="FvW-vx-LsM" secondAttribute="centerY" id="VZl-H2-LtS"/>
                     <constraint firstItem="FvW-vx-LsM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Xgv-ve-JMz"/>
                     <constraint firstItem="i7p-2I-d1V" firstAttribute="leading" secondItem="eEe-il-k6n" secondAttribute="trailing" constant="32" id="YO1-xC-50F"/>
-                    <constraint firstItem="i7p-2I-d1V" firstAttribute="leading" secondItem="OgS-Fp-ISR" secondAttribute="leading" id="aiJ-QD-Ffq"/>
                     <constraint firstItem="i7p-2I-d1V" firstAttribute="centerY" secondItem="wKx-4x-eVP" secondAttribute="centerY" id="duJ-5d-Exl"/>
                     <constraint firstItem="FvW-vx-LsM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="eLY-zm-rG4"/>
+                    <constraint firstItem="M6s-cd-SXk" firstAttribute="centerY" secondItem="FvW-vx-LsM" secondAttribute="centerY" id="gfH-cX-MYf"/>
                     <constraint firstItem="wKx-4x-eVP" firstAttribute="top" secondItem="FvW-vx-LsM" secondAttribute="bottom" constant="13.5" id="hIl-uw-38a"/>
+                    <constraint firstItem="i7p-2I-d1V" firstAttribute="leading" secondItem="M6s-cd-SXk" secondAttribute="leading" id="jZE-FG-IDC"/>
                     <constraint firstAttribute="bottom" secondItem="wKx-4x-eVP" secondAttribute="bottom" constant="13.5" id="qal-zK-e5D"/>
                     <constraint firstItem="wKx-4x-eVP" firstAttribute="leading" secondItem="FvW-vx-LsM" secondAttribute="leading" id="vXy-6f-oGj"/>
-                    <constraint firstItem="OgS-Fp-ISR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="zkS-Lu-4sD"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>

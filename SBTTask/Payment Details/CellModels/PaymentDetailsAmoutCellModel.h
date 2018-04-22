@@ -7,10 +7,13 @@
 //
 
 #import "BaseCellModel.h"
+#import "Payment.h"
 
 @interface PaymentDetailsAmoutCellModel : BaseCellModel
 
 @property (strong, nonatomic) NSString *amountString;
 @property (strong, nonatomic) NSString *taxString;
+
+- (instancetype)initWithPayment:(Payment *)payment;
 
 @end

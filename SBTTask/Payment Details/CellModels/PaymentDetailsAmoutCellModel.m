@@ -10,12 +10,11 @@
 
 @implementation PaymentDetailsAmoutCellModel
 
-- (instancetype)init
-{
+- (instancetype)initWithPayment:(Payment *)payment {
     self = [super init];
     if (self) {
-        self.amountString = @"150,00 ₽";
-        self.taxString = @"Расчет по % (1)";
+        self.amountString = [NSString stringWithFormat:@"%.2f ₽", payment.amoutInRubles];
+        self.taxString = payment.taxesCalculationTypeName;
     }
     
     return self;

@@ -8,9 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+#import "PaymentDetailsDocumentInfoCellModel.h"
+#import "PaymentDetailsDatePickerCellModel.h"
+#import "Payment.h"
+
 @class BaseCellModel;
 
-@interface PaymentDetailsViewModel : NSObject
+@interface PaymentDetailsViewModel : NSObject <PaymentDetailsDocumentInfoCellDelegate, PaymentDetailsDatePickerCellDelegate>
+
+- (instancetype)initWithPayment:(Payment *)payment;
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSMutableArray<BaseCellModel *> *cellModels;

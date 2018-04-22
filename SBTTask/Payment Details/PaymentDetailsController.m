@@ -10,39 +10,69 @@
 #import "Cells/PaymentDetailsDocumentInfoCell.h"
 #import "Cells/PaymentDetailsAmoutCell.h"
 #import "Cells/PaymentDetailsBaseCell.h"
+
 #import "UITableView+CellRegistering.h"
+#import "NSObject+Observe.h"
 
 @interface PaymentDetailsController ()
 
-@property (strong, nonatomic) PaymentDetailsViewModel *model;
+@property (strong, nonatomic) PaymentDetailsViewModel *viewModel;
+@property (strong, nonatomic) NSMutableArray *observingKeyPaths;
 
 @end
 
 @implementation PaymentDetailsController
 
-- (instancetype)initWithModel:(PaymentDetailsViewModel *)model {
+- (instancetype)initWithViewModel:(PaymentDetailsViewModel *)viewModel {
     self = [super init];
     if (self) {
-        self.model = model;
+        self.observingKeyPaths = [NSMutableArray array];
+        self.viewModel = viewModel;
     }
     
     return self;
 }
+    
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self bindViewModel];
+    [self configureNavigationBar];
+    [self registerCells];
+}
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if ([keyPath isEqualToString:@"model.cellModels"]) {
-        NSLog(@"Change Detected");
+- (void)bindViewModel {
+    [self.observingKeyPaths addObject:@"viewModel.cellModels"];
+
+    [self observeKeyPaths:self.observingKeyPaths];
+}
+    
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([self.observingKeyPaths containsObject:keyPath]) {
+        [self registerCells];
+        [self updateTableWithChange:change];
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)updateTableWithChange:(NSDictionary *)change {
+    NSNumber *changeKind = change[NSKeyValueChangeKindKey];
+    NSIndexSet *indexSet = change[NSKeyValueChangeIndexesKey];
     
-    [self configureNavigationBar];
-    [self registerCells];
+    NSMutableArray *indexPaths = [NSMutableArray array];
+    
+    [indexSet enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
+        [indexPaths addObject:[NSIndexPath indexPathForRow:idx inSection:0]];
+    }];
+    
+    [[self tableView] beginUpdates];
+    if (changeKind.integerValue == NSKeyValueChangeInsertion) {
+        [[self tableView] insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
+    } else if (changeKind.integerValue == NSKeyValueChangeRemoval) {
+        [[self tableView] deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
+    }
+    [[self tableView] endUpdates];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -56,33 +86,37 @@
 }
     
 - (void)configureNavigationBar {
-    self.title = self.model.title;
+    self.title = self.viewModel.title;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:58 / 255.0
                                                                            green:153 / 255.0
                                                                             blue:37 / 255.0
                                                                            alpha:1.0];
-    
+
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
 }
 
 - (void)registerCells {
-    NSArray *identifiers = [self.model.cellModels valueForKeyPath:@"@distinctUnionOfObjects.identifier"];
+    NSArray *identifiers = [self.viewModel.cellModels valueForKeyPath:@"@distinctUnionOfObjects.identifier"];
     
     for (NSString *identifier in identifiers) {
-        [self.tableView registerCellForIdentifier:identifier withClass:NSClassFromString(identifier)];
+        [self.tableView registerCellForIdentifier:identifier];
     }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.model.cellModels.count;
+    return self.viewModel.cellModels.count;
 }
     
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    BaseCellModel *model = [self.model.cellModels objectAtIndex:indexPath.row];
-    PaymentDetailsBaseCell *cell = [tableView dequeueReusableCellWithIdentifier:model.identifier];
-    cell.model = model;
+    BaseCellModel *cellModel = [self.viewModel.cellModels objectAtIndex:indexPath.row];
+    PaymentDetailsBaseCell *cell = [tableView dequeueReusableCellWithIdentifier:cellModel.identifier];
+    cell.viewModel = cellModel;
     
     return cell;
+}
+
+- (void)dealloc {
+    [self removeObservingOfKeyPaths:self.observingKeyPaths];
 }
     
 @end

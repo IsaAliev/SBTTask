@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PaymentDetailsController.h"
+#import "Payment.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +17,12 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    Payment *payment = [Payment dummyPayment];
+
+    PaymentDetailsViewModel *viewModel = [[PaymentDetailsViewModel alloc] initWithPayment:payment];
+    
     PaymentDetailsController *paymentController = [[PaymentDetailsController alloc]
-                                                   initWithModel: [PaymentDetailsViewModel new]];
+                                                   initWithViewModel: viewModel];
     UINavigationController *navigationController = [[UINavigationController alloc]
                                                     initWithRootViewController: paymentController];
     

@@ -40,11 +40,12 @@
 
 - (void)setConstraintsForLineView {
     self.underlineView.translatesAutoresizingMaskIntoConstraints = false;
-
+    
     NSArray *constraints = @[[self.underlineView.topAnchor constraintEqualToAnchor:self.bottomAnchor constant:3.0],
                              [self.underlineView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor],
                              [self.underlineView.widthAnchor constraintEqualToAnchor:self.widthAnchor],
-                             [self.underlineView.heightAnchor constraintEqualToConstant:1.0]];
+                             [self.underlineView.heightAnchor
+                              constraintEqualToConstant:1.0]];
     
     [NSLayoutConstraint activateConstraints:constraints];
 }

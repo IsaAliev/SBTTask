@@ -11,5 +11,6 @@
 @interface UITableView (CellRegistering)
 
 - (void)registerCellForIdentifier:(NSString *)identifier withClass:(__unsafe_unretained Class)class;
+- (void)registerCellForIdentifier:(NSString *)identifier;
 
 @end
