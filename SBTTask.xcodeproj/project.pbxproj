@@ -12,6 +12,24 @@
 		CE64F3D7208B87A800E4CA7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F3D6208B87A800E4CA7B /* main.m */; };
 		CE64F3DF208B884100E4CA7B /* PaymentDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F3DE208B884100E4CA7B /* PaymentDetailsController.m */; };
 		CE64F3E3208B8A8700E4CA7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE64F3E2208B8A8700E4CA7B /* LaunchScreen.storyboard */; };
+		CE64F3ED208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F3EB208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.m */; };
+		CE64F3EE208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F3EC208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.xib */; };
+		CE64F3F2208B8CD300E4CA7B /* PaymentDetailsAmoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F3F0208B8CD300E4CA7B /* PaymentDetailsAmoutCell.m */; };
+		CE64F3F3208B8CD300E4CA7B /* PaymentDetailsAmoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F3F1208B8CD300E4CA7B /* PaymentDetailsAmoutCell.xib */; };
+		CE64F3F7208B8CED00E4CA7B /* PaymentDetailsReceiverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F3F5208B8CED00E4CA7B /* PaymentDetailsReceiverCell.m */; };
+		CE64F3F8208B8CED00E4CA7B /* PaymentDetailsReceiverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F3F6208B8CED00E4CA7B /* PaymentDetailsReceiverCell.xib */; };
+		CE64F3FC208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F3FA208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.m */; };
+		CE64F3FD208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F3FB208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.xib */; };
+		CE64F400208B8D6B00E4CA7B /* PaymentDetailsBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F3FF208B8D6B00E4CA7B /* PaymentDetailsBaseCell.m */; };
+		CE64F406208B8E7700E4CA7B /* UnderlinedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F405208B8E7600E4CA7B /* UnderlinedLabel.m */; };
+		CE64F409208B9BE100E4CA7B /* PaymentDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F408208B9BE100E4CA7B /* PaymentDetailsViewModel.m */; };
+		CE64F40D208B9C3400E4CA7B /* BaseCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F40C208B9C3400E4CA7B /* BaseCellModel.m */; };
+		CE64F410208B9CC200E4CA7B /* PaymentDetailsDocumentInfoCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F40F208B9CC200E4CA7B /* PaymentDetailsDocumentInfoCellModel.m */; };
+		CE64F413208BA21500E4CA7B /* PaymentDetailsAmoutCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F412208BA21500E4CA7B /* PaymentDetailsAmoutCellModel.m */; };
+		CE64F416208BA6D000E4CA7B /* PaymentDetailsReceiverCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F415208BA6D000E4CA7B /* PaymentDetailsReceiverCellModel.m */; };
+		CE64F41A208BCF3D00E4CA7B /* UITableView+CellRegistering.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F419208BCF3D00E4CA7B /* UITableView+CellRegistering.m */; };
+		CE64F41E208C75A700E4CA7B /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64F41D208C75A700E4CA7B /* HeaderView.xib */; };
+		CE64F421208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F420208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +42,37 @@
 		CE64F3DD208B884100E4CA7B /* PaymentDetailsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsController.h; sourceTree = "<group>"; };
 		CE64F3DE208B884100E4CA7B /* PaymentDetailsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsController.m; sourceTree = "<group>"; };
 		CE64F3E2208B8A8700E4CA7B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE64F3EA208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsDocumentInfoCell.h; sourceTree = "<group>"; };
+		CE64F3EB208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsDocumentInfoCell.m; sourceTree = "<group>"; };
+		CE64F3EC208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentDetailsDocumentInfoCell.xib; sourceTree = "<group>"; };
+		CE64F3EF208B8CD300E4CA7B /* PaymentDetailsAmoutCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsAmoutCell.h; sourceTree = "<group>"; };
+		CE64F3F0208B8CD300E4CA7B /* PaymentDetailsAmoutCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsAmoutCell.m; sourceTree = "<group>"; };
+		CE64F3F1208B8CD300E4CA7B /* PaymentDetailsAmoutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentDetailsAmoutCell.xib; sourceTree = "<group>"; };
+		CE64F3F4208B8CED00E4CA7B /* PaymentDetailsReceiverCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsReceiverCell.h; sourceTree = "<group>"; };
+		CE64F3F5208B8CED00E4CA7B /* PaymentDetailsReceiverCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsReceiverCell.m; sourceTree = "<group>"; };
+		CE64F3F6208B8CED00E4CA7B /* PaymentDetailsReceiverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentDetailsReceiverCell.xib; sourceTree = "<group>"; };
+		CE64F3F9208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsNameSelectionCell.h; sourceTree = "<group>"; };
+		CE64F3FA208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsNameSelectionCell.m; sourceTree = "<group>"; };
+		CE64F3FB208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentDetailsNameSelectionCell.xib; sourceTree = "<group>"; };
+		CE64F3FE208B8D6B00E4CA7B /* PaymentDetailsBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsBaseCell.h; sourceTree = "<group>"; };
+		CE64F3FF208B8D6B00E4CA7B /* PaymentDetailsBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsBaseCell.m; sourceTree = "<group>"; };
+		CE64F404208B8E7600E4CA7B /* UnderlinedLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnderlinedLabel.h; sourceTree = "<group>"; };
+		CE64F405208B8E7600E4CA7B /* UnderlinedLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnderlinedLabel.m; sourceTree = "<group>"; };
+		CE64F407208B9BE100E4CA7B /* PaymentDetailsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsViewModel.h; sourceTree = "<group>"; };
+		CE64F408208B9BE100E4CA7B /* PaymentDetailsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsViewModel.m; sourceTree = "<group>"; };
+		CE64F40B208B9C3400E4CA7B /* BaseCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCellModel.h; sourceTree = "<group>"; };
+		CE64F40C208B9C3400E4CA7B /* BaseCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCellModel.m; sourceTree = "<group>"; };
+		CE64F40E208B9CC200E4CA7B /* PaymentDetailsDocumentInfoCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsDocumentInfoCellModel.h; sourceTree = "<group>"; };
+		CE64F40F208B9CC200E4CA7B /* PaymentDetailsDocumentInfoCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsDocumentInfoCellModel.m; sourceTree = "<group>"; };
+		CE64F411208BA21500E4CA7B /* PaymentDetailsAmoutCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsAmoutCellModel.h; sourceTree = "<group>"; };
+		CE64F412208BA21500E4CA7B /* PaymentDetailsAmoutCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsAmoutCellModel.m; sourceTree = "<group>"; };
+		CE64F414208BA6D000E4CA7B /* PaymentDetailsReceiverCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsReceiverCellModel.h; sourceTree = "<group>"; };
+		CE64F415208BA6D000E4CA7B /* PaymentDetailsReceiverCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsReceiverCellModel.m; sourceTree = "<group>"; };
+		CE64F418208BCF3D00E4CA7B /* UITableView+CellRegistering.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+CellRegistering.h"; sourceTree = "<group>"; };
+		CE64F419208BCF3D00E4CA7B /* UITableView+CellRegistering.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CellRegistering.m"; sourceTree = "<group>"; };
+		CE64F41D208C75A700E4CA7B /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		CE64F41F208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentDetailsNameSelectionCellModel.h; sourceTree = "<group>"; };
+		CE64F420208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailsNameSelectionCellModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +105,9 @@
 		CE64F3C6208B87A400E4CA7B /* SBTTask */ = {
 			isa = PBXGroup;
 			children = (
+				CE64F417208BCEF000E4CA7B /* Categories */,
+				CE64F3E5208B8C4E00E4CA7B /* Payment Details */,
 				CE64F3E4208B8AAE00E4CA7B /* Supporting Files */,
-				CE64F3DD208B884100E4CA7B /* PaymentDetailsController.h */,
-				CE64F3DE208B884100E4CA7B /* PaymentDetailsController.m */,
 				CE64F3C7208B87A400E4CA7B /* AppDelegate.h */,
 				CE64F3C8208B87A400E4CA7B /* AppDelegate.m */,
 			);
@@ -74,6 +123,101 @@
 				CE64F3E2208B8A8700E4CA7B /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE64F3E5208B8C4E00E4CA7B /* Payment Details */ = {
+			isa = PBXGroup;
+			children = (
+				CE64F40A208B9C2500E4CA7B /* CellModels */,
+				CE64F403208B8E5A00E4CA7B /* CustomViews */,
+				CE64F3E9208B8C7F00E4CA7B /* Cells */,
+				CE64F41B208C759300E4CA7B /* Xibs */,
+				CE64F3DD208B884100E4CA7B /* PaymentDetailsController.h */,
+				CE64F3DE208B884100E4CA7B /* PaymentDetailsController.m */,
+				CE64F407208B9BE100E4CA7B /* PaymentDetailsViewModel.h */,
+				CE64F408208B9BE100E4CA7B /* PaymentDetailsViewModel.m */,
+			);
+			path = "Payment Details";
+			sourceTree = "<group>";
+		};
+		CE64F3E6208B8C5C00E4CA7B /* Cells Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				CE64F3FB208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.xib */,
+				CE64F3F6208B8CED00E4CA7B /* PaymentDetailsReceiverCell.xib */,
+				CE64F3F1208B8CD300E4CA7B /* PaymentDetailsAmoutCell.xib */,
+				CE64F3EC208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.xib */,
+			);
+			path = "Cells Xibs";
+			sourceTree = "<group>";
+		};
+		CE64F3E9208B8C7F00E4CA7B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE64F3EA208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.h */,
+				CE64F3EB208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.m */,
+				CE64F3EF208B8CD300E4CA7B /* PaymentDetailsAmoutCell.h */,
+				CE64F3F0208B8CD300E4CA7B /* PaymentDetailsAmoutCell.m */,
+				CE64F3F4208B8CED00E4CA7B /* PaymentDetailsReceiverCell.h */,
+				CE64F3F5208B8CED00E4CA7B /* PaymentDetailsReceiverCell.m */,
+				CE64F3F9208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.h */,
+				CE64F3FA208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.m */,
+				CE64F3FE208B8D6B00E4CA7B /* PaymentDetailsBaseCell.h */,
+				CE64F3FF208B8D6B00E4CA7B /* PaymentDetailsBaseCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CE64F403208B8E5A00E4CA7B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				CE64F404208B8E7600E4CA7B /* UnderlinedLabel.h */,
+				CE64F405208B8E7600E4CA7B /* UnderlinedLabel.m */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		CE64F40A208B9C2500E4CA7B /* CellModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE64F40B208B9C3400E4CA7B /* BaseCellModel.h */,
+				CE64F40C208B9C3400E4CA7B /* BaseCellModel.m */,
+				CE64F40E208B9CC200E4CA7B /* PaymentDetailsDocumentInfoCellModel.h */,
+				CE64F40F208B9CC200E4CA7B /* PaymentDetailsDocumentInfoCellModel.m */,
+				CE64F411208BA21500E4CA7B /* PaymentDetailsAmoutCellModel.h */,
+				CE64F412208BA21500E4CA7B /* PaymentDetailsAmoutCellModel.m */,
+				CE64F414208BA6D000E4CA7B /* PaymentDetailsReceiverCellModel.h */,
+				CE64F415208BA6D000E4CA7B /* PaymentDetailsReceiverCellModel.m */,
+				CE64F41F208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.h */,
+				CE64F420208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.m */,
+			);
+			path = CellModels;
+			sourceTree = "<group>";
+		};
+		CE64F417208BCEF000E4CA7B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CE64F418208BCF3D00E4CA7B /* UITableView+CellRegistering.h */,
+				CE64F419208BCF3D00E4CA7B /* UITableView+CellRegistering.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		CE64F41B208C759300E4CA7B /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				CE64F41C208C759D00E4CA7B /* Views */,
+				CE64F3E6208B8C5C00E4CA7B /* Cells Xibs */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		CE64F41C208C759D00E4CA7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE64F41D208C75A700E4CA7B /* HeaderView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,8 +277,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE64F3F8208B8CED00E4CA7B /* PaymentDetailsReceiverCell.xib in Resources */,
 				CE64F3E3208B8A8700E4CA7B /* LaunchScreen.storyboard in Resources */,
 				CE64F3D1208B87A800E4CA7B /* Assets.xcassets in Resources */,
+				CE64F3FD208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.xib in Resources */,
+				CE64F3F3208B8CD300E4CA7B /* PaymentDetailsAmoutCell.xib in Resources */,
+				CE64F3EE208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.xib in Resources */,
+				CE64F41E208C75A700E4CA7B /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,9 +294,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE64F3ED208B8CB200E4CA7B /* PaymentDetailsDocumentInfoCell.m in Sources */,
 				CE64F3D7208B87A800E4CA7B /* main.m in Sources */,
+				CE64F400208B8D6B00E4CA7B /* PaymentDetailsBaseCell.m in Sources */,
+				CE64F3F7208B8CED00E4CA7B /* PaymentDetailsReceiverCell.m in Sources */,
 				CE64F3DF208B884100E4CA7B /* PaymentDetailsController.m in Sources */,
 				CE64F3C9208B87A400E4CA7B /* AppDelegate.m in Sources */,
+				CE64F413208BA21500E4CA7B /* PaymentDetailsAmoutCellModel.m in Sources */,
+				CE64F3FC208B8D1F00E4CA7B /* PaymentDetailsNameSelectionCell.m in Sources */,
+				CE64F41A208BCF3D00E4CA7B /* UITableView+CellRegistering.m in Sources */,
+				CE64F416208BA6D000E4CA7B /* PaymentDetailsReceiverCellModel.m in Sources */,
+				CE64F406208B8E7700E4CA7B /* UnderlinedLabel.m in Sources */,
+				CE64F410208B9CC200E4CA7B /* PaymentDetailsDocumentInfoCellModel.m in Sources */,
+				CE64F40D208B9C3400E4CA7B /* BaseCellModel.m in Sources */,
+				CE64F421208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.m in Sources */,
+				CE64F409208B9BE100E4CA7B /* PaymentDetailsViewModel.m in Sources */,
+				CE64F3F2208B8CD300E4CA7B /* PaymentDetailsAmoutCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8WY4UX44X6;
-				INFOPLIST_FILE = SBTTask/Info.plist;
+				INFOPLIST_FILE = "SBTTask/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,7 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8WY4UX44X6;
-				INFOPLIST_FILE = SBTTask/Info.plist;
+				INFOPLIST_FILE = "SBTTask/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

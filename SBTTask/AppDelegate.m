@@ -16,7 +16,8 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    PaymentDetailsController *paymentController = [[PaymentDetailsController alloc] init];
+    PaymentDetailsController *paymentController = [[PaymentDetailsController alloc]
+                                                   initWithModel: [PaymentDetailsViewModel new]];
     UINavigationController *navigationController = [[UINavigationController alloc]
                                                     initWithRootViewController: paymentController];
     
@@ -24,6 +25,8 @@
     self.window = [[UIWindow alloc] initWithFrame: screenBounds];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
+    
+    application.statusBarStyle = UIStatusBarStyleLightContent;
     
     return YES;
 }
