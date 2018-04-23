@@ -36,6 +36,7 @@
 		CE64F42C208CA13300E4CA7B /* NSDate+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F42B208CA13300E4CA7B /* NSDate+NSString.m */; };
 		CE64F430208CAD8800E4CA7B /* Payment.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F42F208CAD8800E4CA7B /* Payment.m */; };
 		CE64F433208CB51A00E4CA7B /* NSObject+Observe.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F432208CB51A00E4CA7B /* NSObject+Observe.m */; };
+		CE73963A208CFBC700BF21F6 /* UnderlinedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CE739639208CFBC700BF21F6 /* UnderlinedTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,8 @@
 		CE64F42F208CAD8800E4CA7B /* Payment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Payment.m; sourceTree = "<group>"; };
 		CE64F431208CB51A00E4CA7B /* NSObject+Observe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Observe.h"; sourceTree = "<group>"; };
 		CE64F432208CB51A00E4CA7B /* NSObject+Observe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Observe.m"; sourceTree = "<group>"; };
+		CE739638208CFBC700BF21F6 /* UnderlinedTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnderlinedTextField.h; sourceTree = "<group>"; };
+		CE739639208CFBC700BF21F6 /* UnderlinedTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnderlinedTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,8 @@
 			children = (
 				CE64F404208B8E7600E4CA7B /* UnderlinedLabel.h */,
 				CE64F405208B8E7600E4CA7B /* UnderlinedLabel.m */,
+				CE739638208CFBC700BF21F6 /* UnderlinedTextField.h */,
+				CE739639208CFBC700BF21F6 /* UnderlinedTextField.m */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 				CE64F421208C831700E4CA7B /* PaymentDetailsNameSelectionCellModel.m in Sources */,
 				CE64F42C208CA13300E4CA7B /* NSDate+NSString.m in Sources */,
 				CE64F429208C8BC800E4CA7B /* PaymentDetailsDatePickerCellModel.m in Sources */,
+				CE73963A208CFBC700BF21F6 /* UnderlinedTextField.m in Sources */,
 				CE64F409208B9BE100E4CA7B /* PaymentDetailsViewModel.m in Sources */,
 				CE64F3F2208B8CD300E4CA7B /* PaymentDetailsAmoutCell.m in Sources */,
 			);

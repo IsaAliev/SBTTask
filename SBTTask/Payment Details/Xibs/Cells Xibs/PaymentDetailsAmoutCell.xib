@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -44,38 +43,42 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-dZ-4rh" customClass="UnderlinedLabel">
-                        <rect key="frame" x="16" y="42.5" width="47" height="19.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                <color key="value" red="0.34901960780000002" green="0.55294117649999996" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right-chevron" translatesAutoresizingMaskIntoConstraints="NO" id="get-4D-Lzc">
                         <rect key="frame" x="283.5" y="45" width="10" height="16"/>
                     </imageView>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0,00 ₽" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4eg-Nx-ifE" customClass="UnderlinedTextField">
+                        <rect key="frame" x="16" y="42" width="51" height="20"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                <color key="value" red="0.2274509804" green="0.59999999999999998" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="Zhj-yl-FlX" id="dii-wm-qD8"/>
+                        </connections>
+                    </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Byo-dZ-4rh" firstAttribute="top" secondItem="dqV-bg-WvK" secondAttribute="bottom" constant="14.5" id="6rB-d6-G2S"/>
                     <constraint firstItem="get-4D-Lzc" firstAttribute="leading" secondItem="nF9-Yh-UYT" secondAttribute="trailing" constant="8.5" id="6yL-u9-8Ui"/>
-                    <constraint firstAttribute="bottom" secondItem="Byo-dZ-4rh" secondAttribute="bottom" constant="13.5" id="Imd-mG-jXG"/>
+                    <constraint firstItem="4eg-Nx-ifE" firstAttribute="top" secondItem="dqV-bg-WvK" secondAttribute="bottom" constant="14" id="8iM-3C-4JN"/>
+                    <constraint firstAttribute="bottom" secondItem="4eg-Nx-ifE" secondAttribute="bottom" constant="13.5" id="Pqk-YU-4Sc"/>
                     <constraint firstItem="nF9-Yh-UYT" firstAttribute="leading" secondItem="oXR-mb-5mC" secondAttribute="leading" id="TyJ-8B-YNs"/>
                     <constraint firstItem="dqV-bg-WvK" firstAttribute="leading" secondItem="F4N-FH-Nbs" secondAttribute="leadingMargin" id="UTU-I5-Lth"/>
                     <constraint firstItem="get-4D-Lzc" firstAttribute="centerY" secondItem="nF9-Yh-UYT" secondAttribute="centerY" id="d7y-BK-cQL"/>
-                    <constraint firstItem="Byo-dZ-4rh" firstAttribute="leading" secondItem="dqV-bg-WvK" secondAttribute="leading" id="hoK-Dn-iWN"/>
+                    <constraint firstItem="4eg-Nx-ifE" firstAttribute="leading" secondItem="dqV-bg-WvK" secondAttribute="leading" id="hNx-U5-gn6"/>
+                    <constraint firstItem="nF9-Yh-UYT" firstAttribute="centerY" secondItem="4eg-Nx-ifE" secondAttribute="centerY" id="hff-1e-nvT"/>
                     <constraint firstItem="oXR-mb-5mC" firstAttribute="centerY" secondItem="dqV-bg-WvK" secondAttribute="centerY" id="lVN-l8-hS2"/>
                     <constraint firstItem="dqV-bg-WvK" firstAttribute="top" secondItem="F4N-FH-Nbs" secondAttribute="topMargin" id="p8p-o4-ORF"/>
-                    <constraint firstItem="nF9-Yh-UYT" firstAttribute="centerY" secondItem="Byo-dZ-4rh" secondAttribute="centerY" id="vjv-1f-e6w"/>
                     <constraint firstItem="oXR-mb-5mC" firstAttribute="leading" secondItem="F4N-FH-Nbs" secondAttribute="centerX" id="wj3-RE-yde"/>
+                    <constraint firstItem="nF9-Yh-UYT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4eg-Nx-ifE" secondAttribute="trailing" constant="8" id="xcG-65-3Z3"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="9RN-vH-TRP"/>
             <connections>
-                <outlet property="amountLabel" destination="Byo-dZ-4rh" id="fg2-fS-PLA"/>
+                <outlet property="amountField" destination="4eg-Nx-ifE" id="7GU-z5-dD5"/>
                 <outlet property="taxLabel" destination="nF9-Yh-UYT" id="j7H-Ei-hQA"/>
             </connections>
             <point key="canvasLocation" x="28" y="90"/>
