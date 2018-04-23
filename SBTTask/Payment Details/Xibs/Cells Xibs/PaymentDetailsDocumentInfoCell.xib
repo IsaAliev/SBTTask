@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -42,17 +41,6 @@
                         <rect key="frame" x="98" y="40" width="30" height="23"/>
                         <state key="normal" image="reload"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№ 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKx-4x-eVP" customClass="UnderlinedLabel">
-                        <rect key="frame" x="16" y="41.5" width="31.5" height="19.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                <color key="value" red="0.22745098039215686" green="0.59999999999999998" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6s-cd-SXk">
                         <rect key="frame" x="160" y="5" width="108" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -63,25 +51,40 @@
                             <action selector="dateButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="91A-og-mQm"/>
                         </connections>
                     </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HnE-HA-hIu" customClass="UnderlinedTextField">
+                        <rect key="frame" x="16" y="41" width="9" height="20"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                <color key="value" red="0.34901960780000002" green="0.55294117649999996" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="5A7-35-kX5"/>
+                        </connections>
+                    </textField>
                 </subviews>
                 <constraints>
                     <constraint firstItem="M6s-cd-SXk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="2rD-cO-3lX"/>
-                    <constraint firstItem="eEe-il-k6n" firstAttribute="centerY" secondItem="wKx-4x-eVP" secondAttribute="centerY" id="MmM-9j-pcD"/>
+                    <constraint firstAttribute="bottom" secondItem="HnE-HA-hIu" secondAttribute="bottom" constant="13.5" id="FQF-dj-eh5"/>
+                    <constraint firstItem="eEe-il-k6n" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HnE-HA-hIu" secondAttribute="trailing" constant="8" id="Mdp-1N-XkJ"/>
                     <constraint firstItem="FvW-vx-LsM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Xgv-ve-JMz"/>
                     <constraint firstItem="i7p-2I-d1V" firstAttribute="leading" secondItem="eEe-il-k6n" secondAttribute="trailing" constant="32" id="YO1-xC-50F"/>
-                    <constraint firstItem="i7p-2I-d1V" firstAttribute="centerY" secondItem="wKx-4x-eVP" secondAttribute="centerY" id="duJ-5d-Exl"/>
+                    <constraint firstItem="eEe-il-k6n" firstAttribute="centerY" secondItem="HnE-HA-hIu" secondAttribute="centerY" id="azX-IA-Pkf"/>
+                    <constraint firstItem="i7p-2I-d1V" firstAttribute="centerY" secondItem="HnE-HA-hIu" secondAttribute="centerY" id="doF-hv-rcF"/>
                     <constraint firstItem="FvW-vx-LsM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="eLY-zm-rG4"/>
                     <constraint firstItem="M6s-cd-SXk" firstAttribute="centerY" secondItem="FvW-vx-LsM" secondAttribute="centerY" id="gfH-cX-MYf"/>
-                    <constraint firstItem="wKx-4x-eVP" firstAttribute="top" secondItem="FvW-vx-LsM" secondAttribute="bottom" constant="13.5" id="hIl-uw-38a"/>
                     <constraint firstItem="i7p-2I-d1V" firstAttribute="leading" secondItem="M6s-cd-SXk" secondAttribute="leading" id="jZE-FG-IDC"/>
-                    <constraint firstAttribute="bottom" secondItem="wKx-4x-eVP" secondAttribute="bottom" constant="13.5" id="qal-zK-e5D"/>
-                    <constraint firstItem="wKx-4x-eVP" firstAttribute="leading" secondItem="FvW-vx-LsM" secondAttribute="leading" id="vXy-6f-oGj"/>
+                    <constraint firstItem="HnE-HA-hIu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="leV-qJ-R9W"/>
+                    <constraint firstItem="HnE-HA-hIu" firstAttribute="top" secondItem="FvW-vx-LsM" secondAttribute="bottom" constant="13" id="q0s-LT-qmm"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="dateLabel" destination="i7p-2I-d1V" id="bdH-3A-ZTf"/>
-                <outlet property="numberLabel" destination="wKx-4x-eVP" id="tdT-Tp-X76"/>
+                <outlet property="numberTextField" destination="HnE-HA-hIu" id="y6c-UD-j6c"/>
             </connections>
             <point key="canvasLocation" x="34" y="69.5"/>
         </tableViewCell>

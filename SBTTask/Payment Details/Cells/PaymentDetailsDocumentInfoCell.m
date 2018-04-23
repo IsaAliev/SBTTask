@@ -13,7 +13,7 @@
 
 @interface PaymentDetailsDocumentInfoCell ()
 
-@property (weak, nonatomic) IBOutlet UILabel *numberLabel;
+@property (weak, nonatomic) IBOutlet UITextField *numberTextField;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) NSMutableArray *observingKeyPaths;
 
@@ -23,12 +23,12 @@
 
 - (void)updateViews {
     self.observingKeyPaths = [NSMutableArray array];
-    [self updateLabels];
+    [self updateAppearance];
     [self bindWithModel];
 }
 
-- (void)updateLabels {
-    self.numberLabel.text = [self cellModel].numberString;
+- (void)updateAppearance {
+    self.numberTextField.text = [self cellModel].numberString;
     self.dateLabel.text = [self cellModel].dateString;
 }
 
@@ -40,7 +40,7 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if ([self.observingKeyPaths containsObject:keyPath]) {
-        [self updateLabels];
+        [self updateAppearance];
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
@@ -52,6 +52,27 @@
 
 - (IBAction)dateButtonAction:(UIButton *)sender {
     [[self cellModel] dateButtonDidTap];
+}
+
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    if ([textField.text containsString:@"№ "]) {
+        textField.text = [textField.text stringByReplacingOccurrencesOfString:@"№ " withString:@""];
+    }
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if ([string componentsSeparatedByCharactersInSet:NSCharacterSet.decimalDigitCharacterSet.invertedSet].count > 1) {
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    if (![textField.text containsString:@"№ "]) {
+        textField.text = [NSString stringWithFormat:@"№ %@", textField.text];
+    }
 }
 
 - (void)dealloc {

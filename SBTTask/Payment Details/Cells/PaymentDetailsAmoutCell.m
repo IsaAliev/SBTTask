@@ -25,45 +25,24 @@
     self.taxLabel.text = cellModel.taxString;
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range
-                                                        replacementString:(NSString *)string {
-    
-    BOOL isDeleting = string.length == 0;
-    
-    NSString *textWithoutReplacement = textField.text;
-    NSRange modifiedRange = range;
-    NSInteger locationOfRubleSymbol = [textWithoutReplacement rangeOfString:@"₽"].location;
-
-    if (range.location == 0 && range.length == textField.text.length && isDeleting) {
-        return YES;
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    if ([textField.text containsString:@" ₽"]) {
+        textField.text = [textField.text stringByReplacingOccurrencesOfString:@" ₽" withString:@""];
     }
+}
 
-    if ([textWithoutReplacement containsString:@"₽"]) {
-        textWithoutReplacement = [textWithoutReplacement stringByReplacingOccurrencesOfString:@" ₽" withString:@""];
-        
-        if (range.location == locationOfRubleSymbol + 1) {
-            modifiedRange = NSMakeRange(MAX(range.location - 2, 0), range.length);
-        } else if (range.location == locationOfRubleSymbol - 1 && isDeleting) {
-            modifiedRange = NSMakeRange(MAX(range.location - 1, 0), range.length);
-        } else if (range.location == locationOfRubleSymbol && !isDeleting) {
-            modifiedRange = NSMakeRange(MAX(locationOfRubleSymbol - 1, 0), range.length);
-        } else if (range.location == locationOfRubleSymbol && isDeleting) {
-            if (textWithoutReplacement.length == 0) {
-                return NO;
-            } else {
-                modifiedRange = NSMakeRange(MAX(locationOfRubleSymbol - 2, 0), range.length);
-            }
-        }
-    }
-    
-    if ([textWithoutReplacement length] == 0 && [string isEqualToString:@""]) {
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if ([string componentsSeparatedByCharactersInSet:NSCharacterSet.letterCharacterSet].count > 1) {
         return NO;
     }
-
-    NSString *textWithReplacement = [textWithoutReplacement stringByReplacingCharactersInRange:modifiedRange withString:string];
-    textField.text = [NSString stringWithFormat:@"%@ ₽", textWithReplacement];
     
-    return NO;
+    return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    if (![textField.text containsString:@" ₽"]) {
+        textField.text = [NSString stringWithFormat:@"%@ ₽", textField.text];
+    }
 }
 
 @end
