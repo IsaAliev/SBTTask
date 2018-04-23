@@ -26,7 +26,7 @@
                             <constraint firstAttribute="height" constant="43.5" id="P0x-Op-JfZ"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                         <connections>
                             <outlet property="delegate" destination="KGk-i7-Jjw" id="c4a-aW-233"/>
                         </connections>
