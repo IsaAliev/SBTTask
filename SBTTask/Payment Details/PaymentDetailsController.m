@@ -15,6 +15,7 @@
 #import "NSObject+Observe.h"
 
 NSString * const updateRowsTriggerKeyPath = @"viewModel.shouldUpdateRowsTrigger";
+NSString * const cellModelsKeyPath = @"viewModel.cellModels";
 
 @interface PaymentDetailsController ()
 
@@ -44,7 +45,7 @@ NSString * const updateRowsTriggerKeyPath = @"viewModel.shouldUpdateRowsTrigger"
 }
 
 - (void)bindViewModel {
-    [self.observingKeyPaths addObject:@"viewModel.cellModels"];
+    [self.observingKeyPaths addObject:cellModelsKeyPath];
     [self.observingKeyPaths addObject:updateRowsTriggerKeyPath];
 
     [self observeKeyPaths:self.observingKeyPaths];

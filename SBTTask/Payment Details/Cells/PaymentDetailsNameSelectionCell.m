@@ -34,11 +34,14 @@
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
-    [self.placeholderLabel setHidden:[[textView text] length] > 0];
+    NSUInteger textLength = textView.text.length;
+    NSString *text = textView.text;
     
-    if ([[textView text] length] == 0) {
+    [self.placeholderLabel setHidden:textLength > 0];
+    
+    if (textLength == 0) {
         self.nameTextViewHeightConstraint.constant = 44.0;
-        ((PaymentDetailsNameSelectionCellModel *)[self viewModel]).name = textView.text;
+        ((PaymentDetailsNameSelectionCellModel *)[self viewModel]).name = text;
         
         return;
     }
@@ -46,10 +49,10 @@
     self.nameTextViewHeightConstraint.constant = self.nameTextView.textHeight;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.nameTextView scrollRangeToVisible:NSMakeRange(self.nameTextView.text.length - 1, 0)];
+        [self.nameTextView scrollRangeToVisible:NSMakeRange(textLength - 1, 0)];
     });
     
-    ((PaymentDetailsNameSelectionCellModel *)[self viewModel]).name = textView.text;
+    ((PaymentDetailsNameSelectionCellModel *)[self viewModel]).name = text;
 }
 
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
