@@ -9,6 +9,8 @@
 #import "PaymentDetailsNameSelectionCell.h"
 #import "PaymentDetailsNameSelectionCellModel.h"
 
+#import "UITextView+TextSize.h"
+
 @interface PaymentDetailsNameSelectionCell ()
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *nameTextViewHeightConstraint;
@@ -41,14 +43,7 @@
         return;
     }
     
-    NSMutableDictionary *attributes = [NSMutableDictionary new];
-    NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
-    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
-
-    attributes[NSParagraphStyleAttributeName] = paragraphStyle;
-    attributes[NSFontAttributeName] = [UIFont systemFontOfSize:18.0];
-    
-    self.nameTextViewHeightConstraint.constant = [[textView text] boundingRectWithSize:CGSizeMake(self.nameTextView.frame.size.width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attributes context:nil].size.height;
+    self.nameTextViewHeightConstraint.constant = self.nameTextView.textHeight;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.nameTextView scrollRangeToVisible:NSMakeRange(self.nameTextView.text.length - 1, 0)];

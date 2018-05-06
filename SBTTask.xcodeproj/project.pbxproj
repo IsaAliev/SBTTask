@@ -37,6 +37,7 @@
 		CE64F430208CAD8800E4CA7B /* Payment.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F42F208CAD8800E4CA7B /* Payment.m */; };
 		CE64F433208CB51A00E4CA7B /* NSObject+Observe.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64F432208CB51A00E4CA7B /* NSObject+Observe.m */; };
 		CE73963A208CFBC700BF21F6 /* UnderlinedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CE739639208CFBC700BF21F6 /* UnderlinedTextField.m */; };
+		CEF1F185209F514300FA061B /* UITextView+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1F184209F514300FA061B /* UITextView+TextSize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,8 @@
 		CE64F432208CB51A00E4CA7B /* NSObject+Observe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Observe.m"; sourceTree = "<group>"; };
 		CE739638208CFBC700BF21F6 /* UnderlinedTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnderlinedTextField.h; sourceTree = "<group>"; };
 		CE739639208CFBC700BF21F6 /* UnderlinedTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnderlinedTextField.m; sourceTree = "<group>"; };
+		CEF1F183209F514300FA061B /* UITextView+TextSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+TextSize.h"; sourceTree = "<group>"; };
+		CEF1F184209F514300FA061B /* UITextView+TextSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+TextSize.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +234,8 @@
 				CE64F42B208CA13300E4CA7B /* NSDate+NSString.m */,
 				CE64F431208CB51A00E4CA7B /* NSObject+Observe.h */,
 				CE64F432208CB51A00E4CA7B /* NSObject+Observe.m */,
+				CEF1F183209F514300FA061B /* UITextView+TextSize.h */,
+				CEF1F184209F514300FA061B /* UITextView+TextSize.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 				CE64F400208B8D6B00E4CA7B /* PaymentDetailsBaseCell.m in Sources */,
 				CE64F3F7208B8CED00E4CA7B /* PaymentDetailsReceiverCell.m in Sources */,
 				CE64F3DF208B884100E4CA7B /* PaymentDetailsController.m in Sources */,
+				CEF1F185209F514300FA061B /* UITextView+TextSize.m in Sources */,
 				CE64F425208C8B0900E4CA7B /* PaymentDetailsDatePickerCell.m in Sources */,
 				CE64F3C9208B87A400E4CA7B /* AppDelegate.m in Sources */,
 				CE64F413208BA21500E4CA7B /* PaymentDetailsAmoutCellModel.m in Sources */,
